@@ -1,0 +1,42 @@
+body{
+    overflow: hidden;
+}
+div{
+    width: 120px;
+    height: 50px;
+    background-color: blue;
+    border-radius: 5px;
+    position: absolute;
+    animation-name: my-animation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+@keyframes my-animation {
+    0% {
+        margin-top: 0;
+        margin-left: 0;
+    }
+    25%{
+        margin-top: 0;
+        margin-left: calc(100vw - 120px);
+        transform: rotate(180deg);
+        background-color: gold;
+    }
+    50%{
+        margin-top: calc(100vh - 50px);
+        margin-left: calc(100vw - 120px);
+        transform: rotate(0deg);
+        background-color: green;
+    }
+    75% {
+        margin-top: calc(100vh - 50px);
+        margin-left: 0;
+        transform: rotate(180deg);
+        background-color: deeppink;
+    }
+    100%{
+        margin-left: 0;
+        margin-top: 0;
+        transform: rotate(0deg);
+    }
+}
